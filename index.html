@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            color: black;
+        }
+
+        .contan{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box{
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+
+            border: 2px solid rgba(0, 0, 0, 0.649);
+        }
+
+        #logintag{
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        input{
+            align-items: center;
+            width: 150px;
+            height: 10px;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        button{
+            cursor: pointer;
+            padding: 5px;
+            margin-top: 10px;
+            border-radius: 5px;
+            width: 100px;
+            background-color: #718093c5;
+            color: white;
+            font-weight: bold;
+            
+
+        }
+
+        .logn-faild {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(39, 37, 37, 0.95); /* Semi-transparent black overlay */
+            filter: blur(5px); /* Apply a blur effect */
+            display: none;
+           
+        }
+
+        .logn-faild h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: red;    
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="contan">
+        <div class="logn-faild">
+            <h1>
+                Wrong user/pass
+            </h1>
+        </div>
+        <div class="box">
+            <h1 id="logintag">Login form</h1>
+            <input type="username" placeholder="  username" id="user">
+            <input type="password" placeholder="  password" id="pass">
+            <button id="send" onclick="login()">submit</button>
+        </div>
+        
+    </div>
+
+    <script>
+        const username  = document.querySelector('#user')
+        const password = document.querySelector('#pass')
+
+        function login(){
+            if (username.value == 'cyber'|| password.value == 'sifat'){
+                alert('Login success!')
+            }else{
+                alert('Faild')
+            }
+        }
+
+    </script>
+</body>
+</html>
