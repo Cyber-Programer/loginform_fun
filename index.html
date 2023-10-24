@@ -98,8 +98,12 @@
         const password = document.querySelector('#pass')
 
         function login(){
-            if (username.value == 'cyber'|| password.value == 'sifat'){
-                alert('Login success!')
+            if (username.value == 'cyber'){
+                if (password.value == 'sifat'){
+                    alert('Login success!')
+                }else{
+                    alert('Good Try')
+                }
             }else{
                 alert('Faild')
             }
